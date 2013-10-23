@@ -8,10 +8,6 @@ if ~isfinite(stepAngleDeg) || stepAngleDeg<0
     error('step angle should be finite non-negative')
 end
 
-if any(nSteps>0)
-    radians = deg2rad(stepAngleDeg * nSteps);
-else
-    radians = zeros(size(nSteps));
-end
+radians = deg2rad(stepAngleDeg * nSteps);
 
 end
